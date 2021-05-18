@@ -1,0 +1,52 @@
+{
+  "name": "node-typescript-template",
+  "version": "1.0.0",
+  "description": "A complete Node.js project template using TypeScript and following general best practices.",
+  "main": "src/index.ts",
+  "scripts": {
+    "prebuild": "rimraf ./dist && npm run lint:check",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier \"src/**/*.ts\" \"test/**/*.ts\" --check",
+    "lint": "eslint --ext .ts .",
+    "lint:check": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aina261/node-typescript-template.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node.js",
+    "typescript",
+    "template",
+    "jest"
+  ],
+  "author": "https://github.com/Aina261",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aina261/node-typescript-template/issues"
+  },
+  "homepage": "https://github.com/Aina261/node-typescript-template#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "eslint": "^7.26.0",
+    "eslint-config-snippets-book": "^1.0.2",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.2.4"
+  },
+  "engines": {
+    "node": "^14",
+    "npm": "^7"
+  }
+}
